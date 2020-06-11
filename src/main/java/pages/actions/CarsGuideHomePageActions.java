@@ -16,7 +16,7 @@ public class CarsGuideHomePageActions {
 	
 	public void moveToBuyAndSellMenu() {
 		Actions action = new Actions(SeleniumDriver.getDriver());
-		action.moveToElement(carsGuideHomePageLocators.carsForBuyAndSellLink);
+		action.moveToElement(carsGuideHomePageLocators.carsForBuyAndSellLink).build().perform();
 	}
 	
 	public void clickOnSearchCarsMenu() {

@@ -2,7 +2,6 @@ package steps;
 
 import java.util.List;
 
-import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -26,7 +25,7 @@ public class SearchCarsSteps {
 	public void i_move_to_the_menu(List<String> list) throws Throwable {
 	    String menu = list.get(1);
 	    System.out.println(menu);
-	    carsGuideHomePageActions.moveToBuyAndSellMenu();
+	    carsGuideHomePageActions.moveToBuyAndSellMenu();  	
 	}
 
 	@And("^click on \"([^\"]*)\" link$")
@@ -36,7 +35,7 @@ public class SearchCarsSteps {
 
 	@And("^select carbrand as \"([^\"]*)\" from AnyMake dropDown$")
 	public void select_carbrand_as_from_AnyMake_dropDown(String carBrand) throws Throwable {
-	   carsSearchPageActions.selectCarMake(carBrand);
+	    carsSearchPageActions.selectCarMake(carBrand);
 	}
 
 	@And("^select carmodel as \"([^\"]*)\" from SelectModel dropDown$")
@@ -56,7 +55,7 @@ public class SearchCarsSteps {
 
 	@And("^click on Find My Next Car button$")
 	public void click_on_Find_My_Next_Car_button() throws Throwable {
-	    carsSearchPageActions.clickOnFindMyNextCarButton();
+		carsSearchPageActions.clickOnFindMyNextCarButton();
 	}
 
 	@Then("^I should see list of searched cars$")

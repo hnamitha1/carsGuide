@@ -13,9 +13,9 @@ Feature: Acceptance testing to validate Search Cars page is working
       | reviews  |
     And click on "Search Cars" link
     And select carbrand as "BMW" from AnyMake dropDown
-    And select carmodel as "1 SERIES" from SelectModel dropDown
-    And select location as "Australia" from SelectLocation dropDown
-    And select price as "$1000" from price dropDown
+    And select carmodel as "1 Series" from SelectModel dropDown
+    And select location as "NSW - Sydney" from SelectLocation dropDown
+    And select price as "$1,000" from price dropDown
     And click on Find My Next Car button
     Then I should see list of searched cars
     And the page title should be "Bmw 1 Series Cars Under 1000 for sale
