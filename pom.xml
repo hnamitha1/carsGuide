@@ -19,13 +19,16 @@
 			<version>1.2.4</version>
 		</dependency>
 
-
 		<dependency>
-			<groupId>com.vimalselvam</groupId>
-			<artifactId>cucumber-extentsreport</artifactId>
-			<version>1.1.0</version>
-		</dependency>
-
+            <groupId>com.vimalselvam</groupId>
+            <artifactId>cucumber-extentsreport</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>4.0.8</version>
+        </dependency>
 
 		<!-- http://mvnrepository.com/artifact/info.cukes/cucumber-picocontainer -->
 		<dependency>
@@ -34,16 +37,12 @@
 			<version>1.2.4</version>
 		</dependency>
 
-
 		<!-- http://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-server</artifactId>
 			<version>3.8.1</version>
 		</dependency>
-
-	
-
 
 		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-testng -->
 		<dependency>
@@ -58,10 +57,8 @@
 			<artifactId>webdrivermanager</artifactId>
 			<version>4.0.0</version>
 		</dependency>
-		
-
-
 	</dependencies>	
+
 	<build>
 		<plugins>
 
