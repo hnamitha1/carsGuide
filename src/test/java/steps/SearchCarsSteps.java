@@ -2,7 +2,8 @@ package steps;
 
 import java.util.List;
 
-import cucumber.api.PendingException;
+import org.testng.Assert;
+
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -11,14 +12,14 @@ import pages.actions.CarsGuideHomePageActions;
 import pages.actions.CarsSearchPageActions;
 import utils.SeleniumDriver;
 
+
 public class SearchCarsSteps {
-	
 	CarsGuideHomePageActions carsGuideHomePageActions = new CarsGuideHomePageActions();
 	CarsSearchPageActions carsSearchPageActions =  new CarsSearchPageActions();
 	
 	@Given("^I am on the Home Page \"([^\"]*)\" of CarsGuide$")
-	public void i_am_on_the_Home_Page_of_CarsGuide(String websiteURL) throws Throwable {
-	   SeleniumDriver.openPage(websiteURL);
+	public void i_am_on_the_Home_Page_of_CarsGuide(String websiteURL) {
+		SeleniumDriver.openPage(websiteURL);
 	}
 
 	@When("^I move to the menu$")
@@ -60,14 +61,14 @@ public class SearchCarsSteps {
 
 	@Then("^I should see list of searched cars$")
 	public void i_should_see_list_of_searched_cars() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    System.out.println("cars list found");
 	}
 
-	@And("^the page title should be \"Bmw (\\d+) Series Cars Under (\\d+) for sale$")
-	public void the_page_title_should_be_Bmw_Series_Cars_Under_for_sale(int arg1, int arg2) throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	@And("^the page title should be \"([^\"]*)\"$")
+	public void the_page_title_should_be(String expectedTitle) throws Throwable {
+	    String actualTitle = SeleniumDriver.getDriver().getTitle();
+	    Assert.assertEquals(actualTitle, expectedTitle);
+	    Thread.sleep(6000);
 	}
 
 

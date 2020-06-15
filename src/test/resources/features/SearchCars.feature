@@ -18,6 +18,7 @@ Feature: Acceptance testing to validate Search Cars page is working
     And select price as "$1,000" from price dropDown
     And click on Find My Next Car button
     Then I should see list of searched cars
-    And the page title should be "Bmw 1 Series Cars Under 1000 for sale"
+    And the page title should be "Toyota Aristo Under 1000 for Sale Sydney NSW | carsguide"
+    
 
   
