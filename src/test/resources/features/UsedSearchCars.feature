@@ -11,7 +11,7 @@ Feature: Acceptance testing to validate Search Cars Page is working.
     And click on Used Search link
     And select carMaker from AnyMake dropdown
       | carMaker |
-      | AUDI     |
+      | Audi     |
     And select  car model
       | carModel |
       | A4       |
@@ -23,4 +23,4 @@ Feature: Acceptance testing to validate Search Cars Page is working.
       | $1,000 |
     And click on Find_My_Car button
     Then I should see list of Used cars
-    And the page title should match expected title  "Used Audi A4 Cars Under $1000 for Sale SA | CarsGuide"
+    And the page title should match expected title  "Used Audi A4 Under 1000 for Sale SA | carsguide"

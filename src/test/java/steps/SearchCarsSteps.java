@@ -66,9 +66,10 @@ public class SearchCarsSteps {
 
 	@And("^the page title should be \"([^\"]*)\"$")
 	public void the_page_title_should_be(String expectedTitle) throws Throwable {
-	    String actualTitle = SeleniumDriver.getDriver().getTitle();
+		Thread.sleep(6000);
+		String actualTitle = SeleniumDriver.getDriver().getTitle();
 	    Assert.assertEquals(actualTitle, expectedTitle);
-	    Thread.sleep(6000);
+	    
 	}
 
 
